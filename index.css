@@ -1,0 +1,481 @@
+/* Importació de la font Poppins des de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Estil global per a tots els elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none; 
+}
+
+/* Estil per al cos de la pàgina */
+body {
+    font-family: "Poppins", sans-serif;
+
+}
+
+/* Contenidor principal amb una amplada màxima de 1200px i centrat */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+/* Estil per a l'encapçalament */
+.header {
+    background-image: url(recursos/fotoheader.jpeg);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    opacity: 0; /* Establecemos la opacidad inicial a 0 */
+    animation: fadeIn 2s forwards; /* Animación de fade in */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; /* Empezamos con opacidad 0 */
+    }
+    to {
+      opacity: 1; /* Terminamos con opacidad 1 */
+    }
+  }
+
+/* Estil per al menú */
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+/* Estil per al logotip */
+.logo {
+    color: #FFFF;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.logo img {
+    margin-top:10px;
+    width: 60px; /* Ancho deseado */
+    height: auto;
+}
+/* Estil per als elements de la barra de navegació */
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+    color:#ffffff
+
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    display: block;
+    font-weight: 600;   
+}
+
+
+
+
+/* Estil per al botó de menú en pantalles petites */
+#menu {
+    display: none;
+}
+
+/* Efecte de ressaltat al passar el ratolí sobre els enllaços del menú */
+.menu .navbar ul li a:hover {
+    color: #1B293A;
+}
+
+/* Icona del menú */
+.menu-icono {
+    width: 25px;
+}
+
+/* Estil per a l'etiqueta del menú en pantalles petites */
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Estil per al text a l'encapçalament */
+.header-txt {
+    text-align: center;
+}
+
+.header-txt h1 {
+    font-size: 85px;
+    color: #fcfcfc;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.header-txt p {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 0 250px;
+    margin-bottom: 45px;
+}
+
+#imag {
+    width: 600px; /* Ancho de la imagen */
+    height: 800px; /* Altura ajustada automáticamente para mantener la proporción */
+}
+
+
+
+
+/* Estil per als botons */
+.btn-1 {
+    display: inline-block;
+    padding: 12px 45px;
+    border:none;
+    color: #FFFDFC;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#link_webapp {
+    display: inline-block;
+    padding: 12px 45px;
+    border: 1px solid #fffdfc00;
+    border-radius: 20px;
+    background-color: #FFF;
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s; /* Añadimos una transición suave */
+}
+
+#link_webapp:hover {
+    border: 0px;
+    background-color: #1B293A; /* Cambiamos el fondo al color de borde en hover */
+    color: #FFF; /* Cambiamos el color del texto a blanco en hover */
+}
+.btn-1:hover {
+    color: #1B293A;
+    background-color:none;
+}
+
+/* Estil per a seccions generals */
+.general {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Estil per al contingut de les seccions generals */
+.general-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+/* Estil per a la primera secció general */
+.general-1 {  
+    background-image: url(recursos/Mendez.png);
+    background-position: center center;
+    background-size: cover;
+    height: 450px;
+    padding: 170px 55px;
+}
+
+/* Estil per a la segona secció general */
+.general-2 { 
+    background-image: url(recursos/aria.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 170px 55px;
+}
+
+/* Estil per a la tercera secció general */
+.general-3 { 
+    background-image: url(recursos/Pol.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 170px 55px;
+}
+
+/* Estil per a la quarta secció general */
+.general-4 { 
+    background-image: url(recursos/Franco.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 170px 55px;
+}
+
+/* Estil per als títols */
+h2 { 
+    font-size: 70px;
+    text-transform: uppercase;
+    color: #1B293A;
+}
+
+/* Estil per al títol de cada caixa */
+.txt h3 {
+    font-size: 18px;
+    color: #32bdfd;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.video{
+    width:500px;
+    height: 300px; 
+}
+/* Estil per al text de cada caixa */
+.txt p {
+    color: #000000;
+    font-size: 16px;
+}
+
+/* Estil per al peu de pàgina */
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: #02b3d3;
+    color: rgb(0, 0, 0);
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+/* Mitjançant mitjans de comunicació, ajusta l'estil del menú i l'encapçalament en pantalles petites */
+@media(max-width:600px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1B293A; 
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked + .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 100px 30px;
+    }
+
+    .header-txt h1 {
+        font-size: 50px;
+    }
+
+    .header-txt p {
+        padding: 0;
+    }
+
+    .general{
+        padding: 30px 30px 0 30px;
+    }
+    .general-content{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .general-1,
+    .general-2,
+    .general-3,
+    .general-4{
+        height: 350px;
+        padding: 100px 70px;
+        margin-bottom: 10px;
+    }
+    .video{
+        width:200px;
+        height: 150px; 
+    }
+    #imag {
+        width: 300px; /* Ancho de la imagen */
+        height: 400px; /* Altura ajustada automáticamente para mantener la proporción */
+    }
+
+    
+
+    
+}
+
+
+@media(max-width:850px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1B293A; 
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked + .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 100px 30px;
+    }
+
+    .header-txt h1 {
+        font-size: 50px;
+    }
+
+    .header-txt p {
+        padding: 0;
+    }
+
+    .general{
+        padding: 30px 30px 0 30px;
+    }
+    .general-content{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .general-1,
+    .general-2,
+    .general-3,
+    .general-4{
+        height: 350px;
+        padding: 100px 70px;
+        margin-bottom: 10px;
+    }
+    .video{
+        width:200px;
+        height: 150px; 
+    }
+    #imag {
+        width: 300px; /* Ancho de la imagen */
+        height: 400px; /* Altura ajustada automáticamente para mantener la proporción */
+    }
+}
+
+@media(max-width:300px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1B293A; 
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked + .navbar {
+        display: initial;
+    }
+
+    .header {
+        min-height: 0vh;
+    }
+
+    .header-content {
+        padding: 100px 30px;
+    }
+
+    .header-txt h1 {
+        font-size: 25px;
+    }
+
+    .header-txt p {
+        padding: 0;
+    }
+
+    .general{
+        padding: 30px 30px 0 30px;
+    }
+    .general-content{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .general-1,
+    .general-2,
+    .general-3,
+    .general-4{
+        height: 300px;
+        padding: 100px 75px;
+        margin-bottom: 10px;
+    }
+    .video{
+        width:200px;
+        height: 100px; 
+    }
+    #imag {
+        width: 200px; /* Ancho de la imagen */
+        height: 280px; /* Altura ajustada automáticamente para mantener la proporción */
+    }
+    h2 { 
+        font-size: 35px;
+        text-transform: uppercase;
+        color: #1B293A;
+    }
+}
